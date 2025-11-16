@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    namespace = "xyz.wingio.logra"  // Add this line - use your app package
     compileSdk = 34
     
     defaultConfig {
@@ -25,7 +26,7 @@ android {
     buildTypes {
         getByName("release") {
             signingConfig = signingConfigs.getByName("release")
-            isMinifyEnabled = false  // Add this
+            isMinifyEnabled = false
         }
     }
 }
