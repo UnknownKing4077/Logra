@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    kotlin("android")
+    kotlin("android") version "1.9.20"  // Add Kotlin version here
     kotlin("kapt")
 }
 
@@ -46,7 +46,7 @@ android {
     }
     
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.3" // Changed to match Kotlin 1.8.10
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
 }
 
@@ -55,7 +55,7 @@ dependencies {
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     
-    // Compose - Updated versions to match Kotlin 1.8.10
+    // Compose
     implementation("androidx.activity:activity-compose:1.8.0")
     implementation("androidx.compose.ui:ui:1.5.3")
     implementation("androidx.compose.ui:ui-tooling:1.5.3")
