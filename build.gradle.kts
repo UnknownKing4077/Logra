@@ -1,5 +1,17 @@
-// build.gradle.kts (project level)
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
     id("com.android.application") version "8.2.2" apply false
     id("org.jetbrains.kotlin.android") version "1.9.22" apply false
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://repo1.maven.org/maven2") }
+    }
+}
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
 }
