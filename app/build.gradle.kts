@@ -1,10 +1,17 @@
 plugins {
     id("com.android.application")
-    // other plugins...
 }
 
 android {
-    // ... other android config
+    compileSdk = 34
+    
+    defaultConfig {
+        applicationId = "xyz.wingio.logra"
+        minSdk = 21
+        targetSdk = 36
+        versionCode = 1330
+        versionName = "1.30"
+    }
 
     signingConfigs {
         create("release") {
@@ -18,7 +25,7 @@ android {
     buildTypes {
         getByName("release") {
             signingConfig = signingConfigs.getByName("release")
-            // ... other release config
+            isMinifyEnabled = false  // Add this
         }
     }
 }
