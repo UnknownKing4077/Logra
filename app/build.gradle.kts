@@ -46,7 +46,7 @@ android {
     }
     
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.8" // Compatible with Kotlin 1.8.10
+        kotlinCompilerExtensionVersion = "1.4.7" // Exact match for Kotlin 1.8.10
     }
 }
 
@@ -56,17 +56,17 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     
     // Compose - versions compatible with Kotlin 1.8.10
-    implementation("androidx.activity:activity-compose:1.8.0")
-    implementation("androidx.compose.ui:ui:1.5.1")
-    implementation("androidx.compose.ui:ui-tooling:1.5.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.5.1")
+    implementation("androidx.activity:activity-compose:1.7.2")
+    implementation("androidx.compose.ui:ui:1.4.3")
+    implementation("androidx.compose.ui:ui-tooling:1.4.3")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
     implementation("androidx.compose.material3:material3:1.1.1")
-    implementation("androidx.compose.material:material-icons-extended:1.5.1")
-    implementation("androidx.navigation:navigation-compose:2.7.2")
+    implementation("androidx.compose.material:material-icons-extended:1.4.3")
+    implementation("androidx.navigation:navigation-compose:2.6.0")
     
     // Koin
-    implementation("io.insert-koin:koin-android:3.4.3")
-    implementation("io.insert-koin:koin-androidx-compose:3.4.6")
+    implementation("io.insert-koin:koin-android:3.4.0")
+    implementation("io.insert-koin:koin-androidx-compose:3.4.3")
     
     // Room
     implementation("androidx.room:room-runtime:2.5.2")
@@ -74,6 +74,6 @@ dependencies {
     kapt("androidx.room:room-compiler:2.5.2")
     
     // Other required dependencies
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.31.5-beta")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.30.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
 }
