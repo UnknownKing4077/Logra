@@ -46,7 +46,7 @@ android {
     }
     
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.7" // Exact match for Kotlin 1.8.10
+        kotlinCompilerExtensionVersion = "1.4.3" // Exact match for Kotlin 1.8.10
     }
 }
 
@@ -60,7 +60,7 @@ dependencies {
     implementation("androidx.compose.ui:ui:1.4.3")
     implementation("androidx.compose.ui:ui-tooling:1.4.3")
     implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
-    implementation("androidx.compose.material3:material3:1.1.1")
+    implementation("androidx.compose.material3:material3:1.1.0")
     implementation("androidx.compose.material:material-icons-extended:1.4.3")
     implementation("androidx.navigation:navigation-compose:2.6.0")
     
@@ -76,4 +76,7 @@ dependencies {
     // Other required dependencies
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.30.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+    
+    // Add this to suppress version check if needed
+    implementation("androidx.compose.compiler:compiler:1.4.3")
 }
