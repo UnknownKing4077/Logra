@@ -1,0 +1,34 @@
+# .github/workflows/release-apk.yml
+name: Build Release APK
+
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup JDK
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'  # or remove this line for latest
+        
+    - name: Setup Keystore
+      run: |
+        echo "${{ secrets.KEYSTORE }}" | base64 -d > keystore.jks
+        
+    - name: Build Release APK
+      run: |
+        chmod +x gradlew
+        ./gradlew assembleRelease
+        
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-release
+        path: app/build/outputs/apk/release/app-release.apk
