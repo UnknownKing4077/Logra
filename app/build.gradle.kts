@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    kotlin("android") version "1.9.20"  // Add Kotlin version here
+    kotlin("android")
     kotlin("kapt")
 }
 
