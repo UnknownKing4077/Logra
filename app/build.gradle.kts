@@ -1,4 +1,11 @@
+plugins {
+    id("com.android.application")
+    // other plugins...
+}
+
 android {
+    // ... other android config
+
     signingConfigs {
         create("release") {
             storeFile = file("keystore.jks")
@@ -7,9 +14,11 @@ android {
             keyPassword = System.getenv("KEY_PASSWORD")
         }
     }
+
     buildTypes {
         getByName("release") {
             signingConfig = signingConfigs.getByName("release")
+            // ... other release config
         }
     }
 }
