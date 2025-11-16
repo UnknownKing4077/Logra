@@ -1,7 +1,6 @@
-// app/build.gradle.kts
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android") // Remove version here
+    kotlin("android")
 }
 
 android {
@@ -43,9 +42,5 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.core:core-splashscreen:1.0.1")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("dev.rikka.shizuku:api:13.1.5")
-    implementation("dev.rikka.shizuku:provider:13.1.5")
+    implementation("androidx.core:core-ktx:1.9.0")
 }
