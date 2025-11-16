@@ -8,10 +8,10 @@ android {
     
     defaultConfig {
         applicationId = "xyz.wingio.logra"
-        minSdk = 21
-        targetSdk = 34  // Changed to 36
-        versionCode = 1330  // Added version code
-        versionName = "1.30"  // Added version name
+        minSdk = 26  // Changed from 21 to 26 (Android 8.0)
+        targetSdk = 34
+        versionCode = 1330
+        versionName = "1.30"
     }
 
     signingConfigs {
@@ -33,4 +33,5 @@ android {
 
 dependencies {
     implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation("androidx.appcompat:appcompat:1.6.1")  // Add this for colorControlNormal
 }
