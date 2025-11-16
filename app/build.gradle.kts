@@ -8,7 +8,7 @@ android {
     
     defaultConfig {
         applicationId = "xyz.wingio.logra"
-        minSdk = 26  // Changed from 21 to 26 (Android 8.0)
+        minSdk = 26
         targetSdk = 34
         versionCode = 1330
         versionName = "1.30"
@@ -33,5 +33,7 @@ android {
 
 dependencies {
     implementation("androidx.core:core-splashscreen:1.0.1")
-    implementation("androidx.appcompat:appcompat:1.6.1")  // Add this for colorControlNormal
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("dev.rikka.shizuku:api:13.1.5")  // Add Shizuku API
+    implementation("dev.rikka.shizuku:provider:13.1.5")  // Add Shizuku Provider
 }
